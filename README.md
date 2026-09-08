@@ -5,15 +5,31 @@
 ## Install
 
 ```sh
-brew install --cask sriannamalai/tap/cdb
-```
-
-Or tap first, then install:
-
-```sh
 brew tap sriannamalai/tap
+brew trust sriannamalai/tap
 brew install --cask cdb
 ```
+
+### Trusting this tap
+
+Homebrew 6 treats third-party taps as "Untrusted" until you explicitly
+trust them. If you skip the `brew trust` step above, `brew install` will
+refuse with:
+
+```
+Refusing to load cask sriannamalai/tap/cdb from untrusted tap sriannamalai/tap. Run `brew trust --cask sriannamalai/tap/cdb` or `brew trust sriannamalai/tap` to trust it.
+```
+
+You can trust the whole tap, or just the `cdb` cask:
+
+```sh
+brew trust sriannamalai/tap
+# or, to trust only this cask
+brew trust --cask sriannamalai/tap/cdb
+```
+
+Use `brew tap-info sriannamalai/tap` to check the current trust status, and
+`brew untrust sriannamalai/tap` to revoke it.
 
 ## Upgrade
 
