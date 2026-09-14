@@ -6,25 +6,25 @@ cask "cdb" do
     end
   end
 
-  version "1.3.0"
+  version "1.4.0"
 
   on_macos do
     on_arm do
-      sha256 "576e41b6084ce999de885d9247dee3aa159b2537e6f6d61020c5dbd0c366a600"
+      sha256 "df9bae9ed2b0afd3fff7305d56d1bda40aa14d06356cd75b0e503375b647ff0a"
       url "https://github.com/sriannamalai/CDB.CLI/releases/download/v#{version}/cdb_#{version}_darwin_arm64.tar.gz"
     end
     on_intel do
-      sha256 "b9f0c6c82e9bd88e12c86fb89f4b4196127bba078c940e80cac1f3ae8dca9e25"
+      sha256 "cd2d414445aa52ea546a439fc120a5ac72cd4f2373b1d2dfbfd0bc9bb2db9e9c"
       url "https://github.com/sriannamalai/CDB.CLI/releases/download/v#{version}/cdb_#{version}_darwin_amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
-      sha256 "9df80f48a468c66cb8bd6a43de1dc9d18e5a63d668c7234d0e9b3973bf221f65"
+      sha256 "6f463024f30366bb92448dd9178adb2a121d7f04d24a25d7e53b7e8db39120c8"
       url "https://github.com/sriannamalai/CDB.CLI/releases/download/v#{version}/cdb_#{version}_linux_arm64.tar.gz"
     end
     on_intel do
-      sha256 "f62c0c11e636e821eed73ad1409b383d885bd75361cb9d40836f44802c0d742f"
+      sha256 "f8f4ae706b827057e0b03570045ded615f0c206b703fb80132c54d983e8c1d41"
       url "https://github.com/sriannamalai/CDB.CLI/releases/download/v#{version}/cdb_#{version}_linux_amd64.tar.gz"
     end
   end
