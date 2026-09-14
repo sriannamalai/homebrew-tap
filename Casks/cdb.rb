@@ -24,7 +24,7 @@ cask "cdb" do
   end
 
   name "cdb"
-  desc "Interactive CouchDB command line client"
+  desc "Interactive CouchDB command-line client"
   homepage "https://github.com/sriannamalai/CDB.CLI"
 
   livecheck do
@@ -33,9 +33,9 @@ cask "cdb" do
 
   binary "cdb"
 
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/cdb"]
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/cdb"]
     end
   end
 
